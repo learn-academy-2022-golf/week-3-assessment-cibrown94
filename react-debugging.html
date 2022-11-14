@@ -63,26 +63,29 @@
           padding: "10px"
         }
         // No need to change anything ABOVE this line ^
+        // First thing that was wrong was no React fragments
+        // Second thing that was wrong was there was no variable to access in the onClick button
+
 
         return (
-          <h1>Draw a Card</h1>
-          <button onClick={}>
+            <> 
+        <h1>Draw a Card</h1>
+          <button onClick={shuffle}>
             Click to Draw a Card
           </button>
           <button onclick={shuffle}>
             Return Cards and Shuffle Deck
           </button>
-          <div style={handStyles}>
-            {hand.map((card, index) => {
+        
+          I know the problem is in between these two things. 80-88
+          <span style={handStyles}>
+            {hand.map((array, index) => {
+              </span>
               return (
-                <div style={cardStyles} key={index}>
-                  {card}
-                </div>
               )
             })}
-          </div>
         )
-      }
+      
 
       // No need to change anything below this line
 
